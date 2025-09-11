@@ -37,9 +37,6 @@ ENV/
 keys.md
 run.sh
 
-# PDFs (assuming they contain sensitive info)
-pdfs/*
-
 # Jupyter Notebook
 .ipynb_checkpoints
 
