@@ -21,8 +21,8 @@ wheels/
 *.egg
 
 # Virtual Environment
-venv/
-env/
+venv/*.*
+env/*.*
 ENV/
 
 # IDE
