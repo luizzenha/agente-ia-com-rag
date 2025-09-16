@@ -1,4 +1,5 @@
 from langchain_core import embeddings
+from langchain_core.vectorstores import VectorStoreRetriever
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
 from langchain_community.vectorstores import FAISS
 from langchain.schema import Document
@@ -11,7 +12,7 @@ def embed(api_key: str):
     )
     return embeddings
 
-def LoadRetriever(chunks: List[Document], api_key: str):
+def LoadRetriever(chunks: List[Document], api_key: str) -> VectorStoreRetriever:
     embeddings = embed(api_key)
     vectorstore = FAISS.from_documents(chunks, embedding=embeddings)
     retriever = vectorstore.as_retriever(
